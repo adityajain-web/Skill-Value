@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.8s ease-in;
+  font-family: "Baloo 2", cursive;
+}
+
+#wrapper {
+  min-height: 100vh;
+  width: 100%;
+}
+
+#wrapper #quiz_container {
+  max-width: 95vw;
+  width: calc(100vw - 50vw);
+  border-radius: 27px;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+#wrapper #quiz_container #quizHeader {
+  height: 12vh;
+  border-radius: 27px 27px 0px 0px;
+  background-color: #f8bd32;
+}
+
+#wrapper #quiz_container #quizHeader #timer {
+  background-color: #fff;
+  height: 100%;
+  border-radius: 0 27px 0 0;
+}
+
+#wrapper #quiz_container #quizBody {
+  border-radius: 0 0 27px 27px;
+  border-top: none;
+}
+
+#wrapper #quiz_container #quizBody ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+#wrapper #quiz_container #quizBody ul li.option {
+  background-color: #f8bd32;
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 2px solid transparent;
+  border-radius: 27px;
+  box-shadow: 0px 3px 2px 1px silver;
+  font-weight: 500;
+}
+
+#wrapper #quiz_container #quizBody ul li.option:hover {
+  background-color: transparent;
+  border: 2px solid #f8bd32;
+  cursor: pointer;
+  color: #f8bd32;
+}
+
+#wrapper #quiz_container #quizBody ul li.option[value="undefined"] {
+  display: none;
+}
+
+#wrapper #quiz_container #quizBody #quizAction {
+  position: relative;
+}
+
+#wrapper #quiz_container #quizBody #quizAction #showResult {
+  display: none;
+}
+
+#wrapper #quiz_container #quizBody #quizAction #nxt,
+#wrapper #quiz_container #quizBody #quizAction #showResult {
+  border: 2px solid #f8bd32;
+  color: #f8bd32;
+  outline: none;
+  position: absolute;
+  bottom: 0;
+}
+
+#wrapper #quiz_container #quizBody #quizAction #nxt:hover,
+#wrapper #quiz_container #quizBody #quizAction #showResult:hover {
+  background-color: #f8bd32;
+  color: #000;
+}
+
+@media only screen and (max-width: 576px) {
+  #wrapper #quiz_container {
+    width: 95%;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 576px) {
+  #wrapper #quiz_container {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+  #wrapper #quiz_container {
+    width: 90%;
+  }
+}
